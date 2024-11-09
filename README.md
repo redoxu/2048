@@ -1,93 +1,90 @@
-# Jeu2048
+# CentraleSupélec Coding WEEKS 
+
+## Bienvenue aux Coding Weeks !
+### Cet espace correspond au projet `Programmez le jeu 2048`.
+
+
+Cette activité de deux semaines va vous permettre de monter en compétences en programmation et développement. 
+
+A l'issue de cette période, vous serez en mesure de créer un jeu de votre choix en python.
+
+Ce cours sera divisé en deux séquences. La première semaine sera dédiée à l'apprentissage des concepts utiles, par la pratique, en programmant le `jeu 2048`. La seconde sera une semaine projet où vous développerez un jeu de votre choix.
+
+## Prérequis
+
+### Rejoindre les espaces de l'activité
+
+Avant de commencer, merci de bien vouloir :
+
+- rejoindre l'équipe TEAMS de code **kv91h7r** 
+
+- vous répartir par équipe de cinq et de noter votre équipe sur cet [classeur](https://centralesupelec.sharepoint.com/:x:/s/CS_CodingWeek_2048_2021_2022/EWCi78cBcOtOvTOvu49TNukBjMLpsEGXj156b-BOqExJ9g?e=HRrYkj),
+- rejoindre le slack des coding weeks depuis cette [invitation](https://join.slack.com/t/codingweeks20212022/shared_invite/zt-xvxh6pia-FCIuGk_0jR9Whv9NBqJfAg)
+- et rejoindre à minima les canaux `#cw_week1_2048` et `#cw_important_informations`
+ sur Slack.
+
+> Slack est une plateforme de communication collaborative très utilisée en entreprise. C'est par ce moyen que vous pourrez discuter entre vous, partager du code et recevoir des informations complémentaires de la part des encadrants. Vous pouvez soit télécharger l'application Slack ou utiliser la version en ligne.
+
+
+### Visual Studio Code (VSCode)
+
+Pour ces deux semaines, nous vous recommandons fortement d'installer et d'utiliser [Visual Studio Code](https://code.visualstudio.com/) (à ne pas confondre avec Visual Studio) qui est un éditeur qui s'est beaucoup popularisé ces dernières années. Il est très adapté à python et, surtout, il est très facile à prendre en main et à comprendre. 
+
+Vous pouvez utiliser un autre éditeur si vous le souhaitez. Ce sera alors de votre responsabilité de savoir l'utiliser.
+
+* :point_right: _[Je ne sais pas utiliser VSCode](https://github.com/hudelotc/CentraleSupelec_CodingWeeks_2020/blob/main/VisualStudioCode.md)._
+* :point_right: _[Je ne sais pas utiliser VSCode : les raccourcis clavier ](https://github.com/LoicPoullain/je-code/blob/master/utiliser-visual-studio-code.md)._
+
+### Un rapide rappel de Bash
+
+Lors de ces deux semaines, vous allez devoir très souvent utiliser le shell. Nous vous invitons à suivre le petit tutorial ci-dessous pour gagner de l'assurance.
+
+
+:point_right: _[Cheatsheet Bash](https://github.com/hudelotc/CentraleSupelec_CodingWeeks_2020/blob/main/bash.md)._
+
+
+### Git
+
+Git est un des outils les plus importants des coding weeks. C'est notamment celui qui vous permettra de travailler à plusieurs sur un même projet informatique.
+
+Pour vous permettre de bien maitriser cet outil, nous vous proposons donc :
+
+* Un cours sur Git qui est disponible [ici](https://web.microsoftstream.com/video/ec2b9aa4-f1c4-42dc-994d-f99b767992d1) ou sur Edunao
+* Un petit tutorial à faire sur Git à l'aide de [Learn Git Branching](https://learngitbranching.js.org/) est qui est disponible [ici](https://github.com/hudelotc/CentraleSupelec_CodingWeeks_2020/blob/main/Git.md)
+
+
+### Python
+
+Suite au cours SIP, vous devriez tous avoir python installé sur votre machine. Si ce n'est pas le cas, nous vous invitons à vous référer aux consignes qui vous ont été données lors de ce cours.
+
+Pour commencer au mieux cette semaine, nous vous proposons de suivre les differents petits tutoriaux ci-dessous sur python :
+
+* :point_right: _[Connaitre et vérifier sa version de python ](https://github.com/hudelotc/CentraleSupelec_CodingWeeks_2020/blob/main/pythonversion.md)._
+* :point_right: _[Import de fichiers et de modules
+ ](https://github.com/hudelotc/CentraleSupelec_CodingWeeks_2020/blob/main/modulespackagespython.md)._
+*  :point_right: _[Exceptions](https://github.com/hudelotc/CentraleSupelec_CodingWeeks_2020/blob/main/exceptions.md)._
+
+
+ Avant de passer à la suite, il vous faut passer les 3 tests sur Edunao si ce n'est pas fait :
+ 
+*  [Test bash](https://centralesupelec.edunao.com/mod/quiz/view.php?id=73157)
+*  [Test Git](https://centralesupelec.edunao.com/mod/quiz/view.php?id=72936)
+*  [Test Jalon 0](https://centralesupelec.edunao.com/mod/quiz/view.php?id=72937)
+ 
 
 
 
-## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-## Add your files
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## Projet de semaine 1
 
-```
-cd existing_repo
-git remote add origin https://gitlab-cw1.centralesupelec.fr/paolo.ballarini/jeu2048.git
-git branch -M main
-git push -uf origin main
-```
 
-## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab-cw1.centralesupelec.fr/paolo.ballarini/jeu2048/-/settings/integrations)
+Vous êtes maintenant prêt. C'est parti !
 
-## Collaborate with your team
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
-## Test and Deploy
+### Pour commencer, c'est [ici.](./TemplateProject_2048.md)
 
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
