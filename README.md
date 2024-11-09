@@ -21,8 +21,6 @@ Avant de commencer, merci de bien vouloir :
 - vous répartir par équipe de cinq et de noter votre équipe sur cet [classeur](https://centralesupelec.sharepoint.com/:x:/r/sites/CodingWeeks2425Intervenants/Documents%20partages/General/Equipes%20-%202048.xlsx?d=w30206905edaf4c57bc8dc7088f76d073&csf=1&web=1&e=QTpjjI),	
 
 
-> Slack est une plateforme de communication collaborative très utilisée en entreprise. C'est par ce moyen que vous pourrez discuter entre vous, partager du code et recevoir des informations complémentaires de la part des encadrants. Vous pouvez soit télécharger l'application Slack ou utiliser la version en ligne.
-
 
 ### Visual Studio Code (VSCode)
 
