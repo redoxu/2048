@@ -63,9 +63,9 @@ Pour commencer au mieux cette semaine, nous vous proposons de suivre les differe
 
  Avant de passer à la suite, il vous faut passer les 3 tests sur Edunao si ce n'est pas fait :
  
-*  [Test bash](https://centralesupelec.edunao.com/mod/quiz/view.php?id=73157)
-*  [Test Git](https://centralesupelec.edunao.com/mod/quiz/view.php?id=72936)
-*  [Test Jalon 0](https://centralesupelec.edunao.com/mod/quiz/view.php?id=72937)
+*  [Test bash](https://centralesupelec.edunao.com/mod/quiz/view.php?id=174353) 
+*  [Test Git](https://centralesupelec.edunao.com/mod/quiz/view.php?id=174352)
+*  [Test Jalon 0](https://centralesupelec.edunao.com/mod/quiz/view.php?id=174354)
  
 
 
