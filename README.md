@@ -16,12 +16,9 @@ Ce cours sera divisé en deux séquences. La première semaine sera dédiée à 
 
 Avant de commencer, merci de bien vouloir :
 
-- rejoindre l'équipe TEAMS de code **kv91h7r** 
+- rejoindre l'équipe TEAMS de code **hmjk2ht** 
 
 - vous répartir par équipe de cinq et de noter votre équipe sur cet [classeur](https://centralesupelec.sharepoint.com/:x:/s/CS_CodingWeek_2048_2021_2022/EWCi78cBcOtOvTOvu49TNukBjMLpsEGXj156b-BOqExJ9g?e=HRrYkj),
-- rejoindre le slack des coding weeks depuis cette [invitation](https://join.slack.com/t/codingweeks20212022/shared_invite/zt-xvxh6pia-FCIuGk_0jR9Whv9NBqJfAg)
-- et rejoindre à minima les canaux `#cw_week1_2048` et `#cw_important_informations`
- sur Slack.
 
 > Slack est une plateforme de communication collaborative très utilisée en entreprise. C'est par ce moyen que vous pourrez discuter entre vous, partager du code et recevoir des informations complémentaires de la part des encadrants. Vous pouvez soit télécharger l'application Slack ou utiliser la version en ligne.
 
