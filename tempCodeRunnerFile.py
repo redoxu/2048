@@ -1,1 +1,0 @@
-get_empty_tiles_positions
