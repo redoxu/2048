@@ -1,5 +1,5 @@
- def create_grid():
-    s = []
+def create_grid():
+    game_grid = []
     for i in range(0,4):
-        s.append([' ',' ',' ', ' '])
-    return s
+        game_grid.append([' ',' ',' ', ' '])
+    return game_grid
