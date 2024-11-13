@@ -1,51 +1,68 @@
-from random import random, choice, randint
-def create_grid(n):
-    game_grid = [[' ' for i in range(n)] for j in range(n)]
-    return game_grid
+import random 
+def create_grid(n=4):
+    #ajouter parametre n plus tard?
+    return ([[' ']*n for i in range(n)])
 
-def grid_add_new_tile_at_position(game_grid,i,j):
-    game_grid[i][j] = 2
+#iteration1
+def grid_add_new_tile_at_position(game_grid,n,m):#ajoute soit 2 soit 4 dans la pos desiree
+    assert n<len(game_grid)
+    assert m<len(game_grid)
+    game_grid[n][m]=get_value_new_tile()
     return game_grid
-
-def get_all_tiles(grid):
-    tiles = []
-    for ligne in grid :
-        for tile in ligne:
-            if tile == ' ' :
-                tiles.append(0)
+#iteration2
+def get_all_tiles(game_grid):#unifie la liste de listes en une liste globale et transforme ' ' en 0
+    empt=[]
+    for liste in game_grid:
+        for k in liste:
+            if k==' ':
+                empt.append(0)
             else:
-                tiles.append(tile)
-    return tiles
+                empt.append(k)
+    return empt
 
-def get_value_new_tile():
-    a = random()
-    if a < 0.9:
+def get_value_new_tile():#renvoie 2 ou 4 avec une proba respective de 90 et 10
+    a=random.randrange(0,100)
+    if a<10:
+        return 4
+    else:
         return 2
-    return 4
+    
+#iteration3
 
-def get_empty_tiles_positions(grid):
-    empty_tiles_positions = []
-    for i in range(len(grid)):
-        for j in range(len(grid[0])):
-            if grid[i][j] in [0, ' ']:
-                empty_tiles_positions.append((i,j))
-    return empty_tiles_positions
+def get_empty_tiles_positions(liste):#renvoie la liste des positions nulles ou apostrophées
+    empt=[]
+    n=len(liste)
+    for i in range(n):
+        for j in range(n):
+            if liste[i][j]==0 or liste[i][j]==' ':
+                empt.append((i,j))
+    return empt
 
-def grid_get_value(grid,x,y):
-    if grid[x][y] == ' ':
-        return 0
+def grid_get_value(grid,x,y):#basically grid[x][y]
     return grid[x][y]
 
-def get_new_position(grid):
-    return choice(get_empty_tiles_positions(grid))
+def get_new_position(grid):#renvoie la position random dun 0 ou dune apostrophe
+    L=get_empty_tiles_positions(grid)
+    n=len(L)
+    a=random.randrange(0,n)
+    x=L[a]
+    if grid_get_value(grid,x[0],x[1])==' ':
+        grid[x[0]][x[1]]=0
+    return x
 
-def grid_add_new_tile(grid):
-    position = get_new_position(grid)
-    grid[position[0]][position[1]] = get_value_new_tile()
+def grid_add_new_tile(game_grid):#ajouter randomly un 2 ou 4 dans une case 0 ou apostrophe
+    x=get_new_position(game_grid)
+    grid_add_new_tile_at_position(game_grid,x[0],x[1])
+    return game_grid
+    
+#iteration4
+def init_game(n=4):
+    grid=create_grid(n)
+    grid_add_new_tile(grid)
+    grid_add_new_tile(grid)
     return grid
-
-def init_game(n):
-    grid = create_grid(n)
-    grid = grid_add_new_tile(grid)
-    grid = grid_add_new_tile(grid)
-    return grid
+    
+    
+    
+    
+    
