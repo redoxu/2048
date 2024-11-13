@@ -7,3 +7,5 @@ def move_row_left(ligne):
             ligne [i]=ligne[i+1]
         ligne[n-1]=0
     return ligne
+def move_grid(grid,d):
+    pass
