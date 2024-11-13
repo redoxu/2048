@@ -1,8 +1,8 @@
 import fonctionnalite6
 
 def read_player_command():
-    move = input("Entrez votre commande (g (gauche), d (droite), h (haut), b (bas)):")
-    while move not in ['g', 'd', 'h', 'b']:
+    move = input("Entrez votre commande (left (gauche), right (droite), up (haut), down (bas)):")
+    while move not in ['left', 'right', 'up', 'down']:
         print("choix non valide")
         move = input("Entrez votre commande (g (gauche), d (droite), h (haut), b (bas)):")
     return move
