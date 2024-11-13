@@ -50,7 +50,7 @@ def get_new_position(grid):#renvoie la position random dun 0 ou dune apostrophe
         grid[x[0]][x[1]]=0
     return x
 
-def grid_add_new_tile(game_grid):#ajouter un 2 ou 4 dans une case vide ou apostrophe
+def grid_add_new_tile(game_grid):#ajouter randomly un 2 ou 4 dans une case 0 ou apostrophe
     x=get_new_position(game_grid)
     grid_add_new_tile_at_position(game_grid,x[0],x[1])
     return game_grid

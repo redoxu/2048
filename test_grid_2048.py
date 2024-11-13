@@ -50,7 +50,7 @@ def test_grid_add_new_tile():
     tiles = get_all_tiles(game_grid)
     assert 2 in tiles or 4 in tiles
     
- #iteration 4
+ #iteration num 4 
  
 def test_init_game():
     grid = init_game(4)
