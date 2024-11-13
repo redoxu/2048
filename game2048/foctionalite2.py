@@ -60,8 +60,10 @@ def long_value_with_theme(grid_game,theme):
     m=0
     for i in range(len(grid_game)):
         for j in range(len(grid_game)):
-            if len(theme[grid_game[i][j]])>=m:
-                m = len(theme[grid_game[i][j]])
+            c = grid_game[i][j]
+            if c == ' 'or c == '': c = 0 
+            if len(theme[c])>=m:
+                m = len(theme[c])
     return m
 
 def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
@@ -80,6 +82,7 @@ def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
     for ligne in game_grid:
         str1 += "|"
         for ele in ligne :
+            if ele == ' ': ele = '0'
             wa3 =theme[int(ele)]
             while len(wa3)<m:
                 wa3 +=' '
