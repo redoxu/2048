@@ -46,6 +46,6 @@ def grid_add_new_tile(grid):
 
 def init_game(n):
     grid = create_grid(n)
-    grid_add_new_tile(grid)
-    grid_add_new_tile(grid)
+    grid = grid_add_new_tile(grid)
+    grid = grid_add_new_tile(grid)
     return grid
