@@ -8,4 +8,4 @@ def move_row_left(ligne):
         ligne[n-1]=0
     return ligne
 def move_grid(grid,d):
-    pass
+    return 0

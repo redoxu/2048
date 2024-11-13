@@ -63,8 +63,8 @@ def long_value_with_theme(grid_game,theme):
             if len(theme[grid_game[i][j]])>=m:
                 m = len(theme[grid_game[i][j]])
     return m
-    
-def grid_to_string_with_size_and_theme(game_grid,theme,n):
+
+def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
     m = long_value_with_theme(game_grid,theme)
     # Convertir tous les éléments en chaînes
     for i in range(n):

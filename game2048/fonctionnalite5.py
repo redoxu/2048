@@ -14,7 +14,7 @@ def move_possible(grid):
             return True
     return False
 
-def is_game_over(grid):
+def is_game_over(grid):#le jeu est il fini
     if not is_grid_full(grid):
         return False
     return not move_possible(grid)
