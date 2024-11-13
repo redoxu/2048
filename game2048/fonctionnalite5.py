@@ -27,7 +27,7 @@ def get_grid_tile_max(grid):
             max=k
     return max
 
-def jeu_gagnant(grid):
+def jeu_gagnant(grid):#jeu gagnant?
     if get_grid_tile_max(grid)>=2048:
         return True
     
