@@ -1,3 +1,4 @@
+from game2048.fct2 import *
 def test_grid_to_string():
     grid = [[' ', ' ', ' ', ' '], [' ', ' ', ' ', ' '], [' ', ' ', ' ', ' '], [2, ' ', ' ', 2]]
     a = """
