@@ -1,4 +1,5 @@
 import copy
+import fonc4 
 
 THEMES = {"0": {"name": "Default", 0: "", 2: "2", 4: "4", 8: "8", 16: "16", 32: "32", 64: "64", 128: "128", 256: "256", 512: "512", 1024: "1024", 2048: "2048", 4096: "4096", 8192: "8192"}, "1": {"name": "Chemistry", 0: "", 2: "H", 4: "He", 8: "Li", 16: "Be", 32: "B", 64: "C", 128: "N", 256: "O", 512: "F", 1024: "Ne", 2048: "Na", 4096: "Mg", 8192: "Al"}, "2": {"name": "Alphabet", 0: "", 2: "A", 4: "B", 8: "C", 16: "D", 32: "E", 64: "F", 128: "G", 256: "H", 512: "I", 1024: "J", 2048: "K", 4096: "L", 8192: "M"}}
 
@@ -67,19 +68,11 @@ def long_value_with_theme(grid_game,theme):
 
 def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
     m = long_value_with_theme(game_grid,theme)
-<<<<<<< HEAD
     game_grid_str = copy.deepcopy(game_grid)
     # Convertir tous les éléments en chaînes
     for i in range(n):
         for j in range(n):
             game_grid_str[i][j] = str(game_grid_str[i][j])
-=======
-    game_gridstr=game_grid
-    # Convertir tous les éléments en chaînes
-    for i in range(n):
-        for j in range(n):
-            game_gridstr[i][j] = str(game_grid[i][j])
->>>>>>> origin/main
     
     # Créer une ligne de séparation entre les lignes de la grille
     egales = ' '+("="*m)
@@ -87,11 +80,7 @@ def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
     
     # Joindre chaque ligne de la grille avec les séparateurs de colonne
     str1 = entrelignes
-<<<<<<< HEAD
     for ligne in game_grid_str:
-=======
-    for ligne in game_gridstr:
->>>>>>> origin/main
         str1 += "|"
         for ele in ligne :
             wa3 =theme[int(ele)]
@@ -104,6 +93,7 @@ def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
         
     # Retourner la grille formatée avec des lignes de séparation au début et à la fin
     return  str1[:-1]
+
 
 """
 def grid_to_grid_str(game_grid):
