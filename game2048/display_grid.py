@@ -46,12 +46,12 @@ def check_game_state(grid, root):
     if fonctio5.is_game_over(grid):
         root.quit()
         
-def key_pressed(event,direction):
-        print(direction)
-        
 def game_play_gui():
     root = tk.Tk()
     root.title("Jeu 2048")
+    setup = tk.Toplevel(root)
+    setup.pack()
+    setup.title("configuration")
     grid = fonctio1.init_game(4)
 
     background = tk.Frame(root, bg="#bbada0")
@@ -90,21 +90,11 @@ def game_play_gui():
         grid = move_grid(grid, direction)
         display_and_update_graphical_grid(grid, labels)
         check_game_state(grid, root)
-
-    
         
     root.bind("<Left>", lambda event: on_move('left'))
     root.bind("<Right>", lambda event: on_move('right'))
     root.bind("<Up>", lambda event: on_move('up'))
     root.bind("<Down>", lambda event: on_move('down'))
-    
-    # button_frame = tk.Frame(root)  
-    # button_frame.grid(row=1, column=0, pady=10)  
-    
-    # tk.Button(button_frame, text="Left", command=lambda: on_move('left')).grid(row=0, column=0, padx=10)
-    # tk.Button(button_frame, text="Right", command=lambda: on_move('right')).grid(row=0, column=1, padx=10)
-    # tk.Button(button_frame, text="Up", command=lambda: on_move('up')).grid(row=0, column=2, padx=10)
-    # tk.Button(button_frame, text="Down", command=lambda: on_move('down')).grid(row=0, column=3, padx=10)
 
     root.mainloop()
 

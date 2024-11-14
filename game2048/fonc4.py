@@ -93,7 +93,4 @@ def move_grid(grid,d):
     elif d == "down":
         return move_grid_down(grid)
     
-grid=[[2,4,4,2],[0,0,2,0],[0 for i in range(4)],[0 for i in range(4)]]
-print(grid)
-print(move_grid(grid,"up"))
-print(grid)
+
