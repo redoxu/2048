@@ -67,9 +67,10 @@ def long_value_with_theme(grid_game,theme):
 def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
     m = long_value_with_theme(game_grid,theme)
     # Convertir tous les éléments en chaînes
+    grid_t = game_grid.copy()
     for i in range(n):
         for j in range(n):
-            game_grid[i][j] = str(game_grid[i][j])
+            grid_t[i][j] = str(grid_t[i][j])
     
     # Créer une ligne de séparation entre les lignes de la grille
     egales = ' '+("="*m)

@@ -14,9 +14,9 @@ def read_size_grid():
     return size
         
 def read_theme_grid():
-    theme = int(input("choisissez un theme inferieur ou égale à 2:  "))
-    while theme > 2:
-        theme = int(input("choisissez un theme inférieur ou égale à 2:  "))
+    theme = input("choisissez un theme inferieur ou égale à 2:  ")
+    while int(theme) > 2:
+        theme = input("choisissez un theme inférieur ou égale à 2:  ")
     return theme
 
 if __name__ == '__main__':

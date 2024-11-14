@@ -11,21 +11,21 @@ def listesz(ligne):
             lignesanszero +=[ele]
     return lignesanszero
 
-def move_row_left(ligne):
-    n = len(ligne)
-    L=[]
-    lignesanszero=listesz(ligne)
-    if no_consective(lignesanszero):
-        while len(lignesanszero)<n:
-            lignesanszero += [0]
-    for i in range(len(lignesanszero)-1):
-        if lignesanszero[i]==lignesanszero[i+1]:
-            lignesanszero[i]=lignesanszero[i]*2
-            lignesanszero[i+1]= 0
-    lignesanszero=listesz(lignesanszero)
-    while len(lignesanszero)<n:
-            lignesanszero += [0]
-    return lignesanszero
+def move_row_left(row_grid):
+    row = row_grid    
+    for j in range(len(row)):
+        for i in range(1,len(row)):
+            if row[i-1]==0:
+                row[i], row[i-1] =row[i-1], row[i]     
+    for x in range(len(row)-1):
+        if row[x]==row[x+1]:
+            row[x]=2*row[x]
+            row[x+1]=0
+    for j in range(len(row)):
+        for i in range(1,len(row)):
+            if row[i-1]==0:
+                row[i], row[i-1] =row[i-1], row[i]           
+    return row
 
 
 def move_row_right(row):

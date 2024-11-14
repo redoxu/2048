@@ -28,7 +28,7 @@ def game_play():
     size=fonctio3.read_size_grid()
     theme=fonctio3.read_theme_grid()
     grid=fonctio1.init_game(size)
-    fonctio2.grid_to_string_with_size_and_theme(grid,size,fonctio2.THEMES[f"{theme}"])
+    fonctio2.grid_to_string_with_size_and_theme(grid,size,fonctio2.THEMES[theme])
     while not fonctio5.is_game_over(grid):
 #demander a lutilisateur son move... reste à faire
         move=fonctio3.read_player_command() 
