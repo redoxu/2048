@@ -1,4 +1,11 @@
-def no_consective(liste):    #si il n'y a pas deux même nbr consicutifs
+    """
+    ajout dun deep copiage de touts les arguments afin de ne pas les modifier lors de lappel de
+    la fonction move_grid dans le test is_game_over
+    """
+
+import copy
+def no_consective(liste):
+    #si il n'y a pas deux même nbr consicutifs
     n =len(liste)
     for j in range(n-1):
         if liste[j] == liste[j+1]:
@@ -12,12 +19,13 @@ def listesz(ligne):
     return lignesanszero
 
 def move_row_left(ligne):
-    n = len(ligne)
-    L=[]
-    lignesanszero=listesz(ligne)
-    if no_consective(lignesanszero):
-        while len(lignesanszero)<n:
-            lignesanszero += [0]
+    ligna=copy.deepcopy(ligne)
+    n = len(ligna)
+    #L=[]
+    lignesanszero=listesz(ligna)
+    #if no_consective(lignesanszero):
+    #    while len(lignesanszero)<n:
+    #        lignesanszero += [0]
     for i in range(len(lignesanszero)-1):
         if lignesanszero[i]==lignesanszero[i+1]:
             lignesanszero[i]=lignesanszero[i]*2
@@ -29,7 +37,8 @@ def move_row_left(ligne):
 
 
 def move_row_right(row):
-    L=row[::-1]
+    rowa=copy.deepcopy(row)
+    L=rowa[::-1]
     l=move_row_left(L)
     return l[::-1]
 
@@ -39,30 +48,32 @@ def transpose(liste_de_listes):
 
 def move_grid_left(grid):
     n = len(grid)
-    grid1=grid
+    gridd=copy.deepcopy(grid)
+    grid1=copy.deepcopy(grid)
     for i in range(n):
-        grid1[i]=move_row_left(grid[i])
+        grid1[i]=move_row_left(gridd[i])
     return grid1
 
 def move_grid_right(grid):
     n = len(grid)
-    grid1=grid
+    gridd=copy.deepcopy(grid)
+    grid1=copy.deepcopy(grid)
     for i in range(n):
-        grid1[i]=move_row_right(grid[i])
+        grid1[i]=move_row_right(gridd[i])
     return grid1
 
 def move_grid_up(grid):
-    grid2 =grid
+    grid2 =copy.deepcopy(grid)
     n = len(grid)
-    grid1=transpose(grid)
+    grid1=transpose(grid2)
     for i in range(n):
         grid2[i]=move_row_left(grid1[i])
     return transpose(grid2)
 
 def move_grid_down(grid):
-    grid2 =grid
+    grid2 =copy.deepcopy(grid)
     n = len(grid)
-    grid1=transpose(grid)
+    grid1=transpose(grid2)
     for i in range(n):
         grid2[i]=move_row_right(grid1[i])
     return transpose(grid2)
@@ -82,3 +93,7 @@ def move_grid(grid,d):
     elif d == "down":
         return move_grid_down(grid)
     
+grid=[[2,4,4,2],[0,0,2,0],[0 for i in range(4)],[0 for i in range(4)]]
+print(grid)
+print(move_grid(grid,"up"))
+print(grid)
