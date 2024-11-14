@@ -1,7 +1,7 @@
-    """
+"""
     ajout dun deep copiage de touts les arguments afin de ne pas les modifier lors de lappel de
     la fonction move_grid dans le test is_game_over
-    """
+"""
 
 import copy
 def no_consective(liste):
