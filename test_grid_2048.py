@@ -4,7 +4,7 @@ from pytest import *
 
 def test_create_grid(n=4):
     assert create_grid(n) == [[' ']*n for i in range(n)]
-#iteration 1
+#iteration1
 def test_grid_add_new_tile_at_position():
     game_grid=create_grid(4)
     game_grid=grid_add_new_tile_at_position(game_grid,1,1)
