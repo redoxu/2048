@@ -1,7 +1,7 @@
 import random 
 def create_grid(n=4):
     #ajouter parametre n plus tard?
-    return ([[' ']*n for i in range(n)])
+    return ([[0]*n for i in range(n)])
 
 #iteration1
 def grid_add_new_tile_at_position(game_grid,n,m):#ajoute soit 2 soit 4 dans la pos desiree
@@ -46,7 +46,7 @@ def get_new_position(grid):#renvoie la position random dun 0 ou dune apostrophe
     n=len(L)
     a=random.randrange(0,n)
     x=L[a]
-    if grid_get_value(grid,x[0],x[1])==' ':
+    if grid_get_value(grid,x[0],x[1])== ' ':
         grid[x[0]][x[1]]=0
     return x
 
