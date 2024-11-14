@@ -46,7 +46,7 @@ def get_new_position(grid):#renvoie la position random dun 0 ou dune apostrophe
     n=len(L)
     a=random.randrange(0,n)
     x=L[a]
-    if grid_get_value(grid,x[0],x[1])==' ':
+    if grid_get_value(grid,x[0],x[1])== ' ':
         grid[x[0]][x[1]]=0
     return x
 
