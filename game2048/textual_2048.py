@@ -2,11 +2,7 @@ import fonctionnalite6
 import argparse
 
 def read_player_command():
-<<<<<<< HEAD
     move = input("Entrez votre commande (left (left), right (right), up (up), down (down)):")
-=======
-    move = input("Entrez votre commande (left (gauche), right (droite), up (haut), down (bas)):")
->>>>>>> origin/main
     while move not in ['left', 'right', 'up', 'down']:
         print("choix non valide")
         move = input("Entrez votre commande (left (left), right (right), up (up), down (down)):")
