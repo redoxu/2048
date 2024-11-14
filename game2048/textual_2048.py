@@ -1,10 +1,15 @@
 import fonctionnalite6
+import argparse
 
 def read_player_command():
+<<<<<<< HEAD
+    move = input("Entrez votre commande (left (left), right (right), up (up), down (down)):")
+=======
     move = input("Entrez votre commande (left (gauche), right (droite), up (haut), down (bas)):")
+>>>>>>> origin/main
     while move not in ['left', 'right', 'up', 'down']:
         print("choix non valide")
-        move = input("Entrez votre commande (g (gauche), d (droite), h (haut), b (bas)):")
+        move = input("Entrez votre commande (left (left), right (right), up (up), down (down)):")
     return move
     
 def read_size_grid():
@@ -14,11 +19,19 @@ def read_size_grid():
     return size
         
 def read_theme_grid():
-    theme = int(input("choisissez un theme inferieur ou égale à 2:  "))
-    while theme > 2:
-        theme = int(input("choisissez un theme inférieur ou égale à 2:  "))
-    return str(theme)
+    theme = input("choisissez un theme inferieur ou égale à 2:  ")
+    while int(theme) > 2:
+        theme = input("choisissez un theme inférieur ou égale à 2:  ")
+    return theme
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="Jeu 2048")
+    parser.add_argument('--size', type=int, default=4, help="Taille de la grille (ex: 4 pour une grille 4x4)")
+    parser.add_argument('--theme', type=str, default='0', help="Thème du jeu (ex: Default, Chemistry, Alphabet)")
+    return parser.parse_args()
+
 
 if __name__ == '__main__':
-    fonctionnalite6.game_play()
-    exit(1)  
+    args = parse_arguments()
+    fonctionnalite6.game_play(args.size, args.theme)
+    exit(1)
