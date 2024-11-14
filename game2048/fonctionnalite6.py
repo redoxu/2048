@@ -28,13 +28,13 @@ def game_play():
     size=fonctio3.read_size_grid()
     theme=fonctio3.read_theme_grid()
     grid=fonctio1.init_game(size)
-    fonctio2.grid_to_string_with_size_and_theme(grid,size,fonctio2.THEMES[f"{theme}"])
+    fonctio2.grid_to_string_with_size_and_theme(grid,fonctio2.THEMES[f"{theme}"],size)
     while not fonctio5.is_game_over(grid):
 #demander a lutilisateur son move... reste à faire
         move=fonctio3.read_player_command() 
         grid=fonctio4.move_grid(grid,move)
         fonctio1.grid_add_new_tile(grid)
-        fonctio2.grid_to_string_with_size_and_theme(grid,size,fonctio2.THEMES[f"{theme}"])
+        fonctio2.grid_to_string_with_size_and_theme(grid,fonctio2.THEMES[f"{theme}"],size)
     if fonctio5.jeu_gagnant(grid):
         return ("jeu gagnant")
     else:
