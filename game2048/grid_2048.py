@@ -1,7 +1,7 @@
 import random 
 def create_grid(n=4):
     #ajouter parametre n plus tard?
-    return ([[' ']*n for i in range(n)])
+    return ([[0]*n for i in range(n)])
 
 #iteration1
 def grid_add_new_tile_at_position(game_grid,n,m):#ajoute soit 2 soit 4 dans la pos desiree
@@ -14,7 +14,7 @@ def get_all_tiles(game_grid):#unifie la liste de listes en une liste globale et 
     empt=[]
     for liste in game_grid:
         for k in liste:
-            if k==' ':
+            if k==0:
                 empt.append(0)
             else:
                 empt.append(k)
@@ -61,8 +61,8 @@ def init_game(n=4):
     grid_add_new_tile(grid)
     grid_add_new_tile(grid)
     return grid
-    
-    
+
+
     
     
     

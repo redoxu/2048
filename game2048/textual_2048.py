@@ -5,7 +5,7 @@ def read_player_command():
     move = input("Entrez votre commande (left (left), right (right), up (up), down (down)):")
     while move not in ['left', 'right', 'up', 'down']:
         print("choix non valide")
-        move = input("Entrez votre commande (g (gauche), d (droite), h (haut), b (bas)):")
+        move = input("Entrez votre commande (left (left), right (right), up (up), down (down)):")
     return move
     
 def read_size_grid():
@@ -15,9 +15,9 @@ def read_size_grid():
     return size
         
 def read_theme_grid():
-    theme = int(input("choisissez un theme inferieur ou égale à 2:  "))
-    while theme > 2:
-        theme = int(input("choisissez un theme inférieur ou égale à 2:  "))
+    theme = input("choisissez un theme inferieur ou égale à 2:  ")
+    while int(theme) > 2:
+        theme = input("choisissez un theme inférieur ou égale à 2:  ")
     return theme
 
 def parse_arguments():

@@ -60,18 +60,13 @@ def long_value_with_theme(grid_game,theme):
     m=0
     for i in range(len(grid_game)):
         for j in range(len(grid_game)):
-            c = grid_game[i][j]
-            if c in {'',' ','  '}: c = 0
-            if len(theme[int(c)])>m:
-                m = len(theme[int(c)])
+            if len(theme[int(grid_game[i][j])])>m:
+                m = len(theme[int(grid_game[i][j])])
     return m
 
 def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
     m = long_value_with_theme(game_grid,theme)
-    # Convertir tous les éléments en chaînes
-    for i in range(n):
-        for j in range(n):
-            game_grid[i][j] = str(game_grid[i][j])
+    
     
     # Créer une ligne de séparation entre les lignes de la grille
     egales = ' '+("="*m)
@@ -82,7 +77,6 @@ def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
     for ligne in game_grid:
         str1 += "|"
         for ele in ligne :
-            if ele in {' ', '  '}: ele = '0'
             wa3 =theme[int(ele)]
             while len(wa3)<m:
                 wa3 +=' '
@@ -93,3 +87,13 @@ def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
         
     # Retourner la grille formatée avec des lignes de séparation au début et à la fin
     return  str1[:-1]
+
+def grid_to_grid_str(game_grid):
+    n = len(game_grid)
+    game_grid_str = [[0]*n for i in range(n)]
+    # Convertir tous les éléments en chaînes
+    for i in range(n):
+        for j in range(n):
+            game_grid_str[i][j] = game_grid[i][j]
+            game_grid_str[i][j] = str(game_grid_str[i][j])
+    return game_grid_str
