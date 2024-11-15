@@ -2,7 +2,6 @@ import tkinter as tk
 import grid_2048 as fonctio1
 import fonctionnalite5 as fonctio5
 import fonc4
-import foctionalite2 as fct2
 import copy
 from functools import partial
 
