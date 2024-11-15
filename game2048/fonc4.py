@@ -1,7 +1,6 @@
-"""
-    ajout dun deep copiage de touts les arguments afin de ne pas les modifier lors de lappel de
-    la fonction move_grid dans le test is_game_over
-"""
+    
+#ajout dun deep copiage de touts les arguments afin de ne pas les modifier lors de lappel de
+#la fonction move_grid dans le test is_game_over
 
 import copy
 def no_consective(liste):
@@ -93,4 +92,7 @@ def move_grid(grid,d):
     elif d == "down":
         return move_grid_down(grid)
     
-
+grid=[[2,4,4,2],[0,0,2,0],[0 for i in range(4)],[0 for i in range(4)]]
+print(grid)
+print(move_grid(grid,"up"))
+print(grid)

@@ -69,7 +69,6 @@ def grid_to_string_with_size_and_theme(game_grid,theme=THEMES["0"],n=4):
     m = long_value_with_theme(game_grid,theme)
     game_grid_str = copy.deepcopy(game_grid)
     # Convertir tous les éléments en chaînes
-    grid_t = game_grid.copy()
     for i in range(n):
         for j in range(n):
             grid_t[i][j] = str(grid_t[i][j])
