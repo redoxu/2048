@@ -43,7 +43,7 @@ L'objectif était de :
 
 🧪 Tous les fichiers de test sont à la racine et couvrent différentes fonctionnalités du jeu.
 
-📄 Le fichier `TemplateProject_2048.md` sert de **guide pédagogique** fourni par les encadrants pour structurer le développement.
+📄 Le fichier `TemplateProject_2048.md` sert de **guide** décrivant les étapes de notre projet.
 
 🎮 Le dossier `game2048` contient tout le **code source du jeu interactif**.
 
